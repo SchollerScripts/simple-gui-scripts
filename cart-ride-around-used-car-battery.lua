@@ -305,7 +305,7 @@ UICorner_15.Parent = god
 
 -- Scripts:
 
-local function FJKYBNY_fake_script() -- Frame.drag 
+local function VJOZC_fake_script() -- Frame.drag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -348,8 +348,8 @@ local function FJKYBNY_fake_script() -- Frame.drag
 		end
 	end)
 end
-coroutine.wrap(FJKYBNY_fake_script)()
-local function NDCDXW_fake_script() -- Frame.LocalScript 
+coroutine.wrap(VJOZC_fake_script)()
+local function WEOI_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent = game.CoreGui
@@ -455,7 +455,7 @@ local function NDCDXW_fake_script() -- Frame.LocalScript
 	end)
 	
 	script.Parent.X.MouseButton1Click:Connect(function()
-		isCollectingCoins = false
+		getgenv().iscollectingcoins = false
 		script.Parent.Parent:Destroy()
 	end)
 	
@@ -528,8 +528,8 @@ local function NDCDXW_fake_script() -- Frame.LocalScript
 		})
 	end)
 end
-coroutine.wrap(NDCDXW_fake_script)()
-local function AOYB_fake_script() -- teleports.drag 
+coroutine.wrap(WEOI_fake_script)()
+local function BVTYO_fake_script() -- teleports.drag 
 	local script = Instance.new('LocalScript', teleports)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -572,4 +572,4 @@ local function AOYB_fake_script() -- teleports.drag
 		end
 	end)
 end
-coroutine.wrap(AOYB_fake_script)()
+coroutine.wrap(BVTYO_fake_script)()
