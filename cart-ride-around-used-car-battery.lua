@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local cartride = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -305,7 +300,7 @@ UICorner_15.Parent = god
 
 -- Scripts:
 
-local function VJOZC_fake_script() -- Frame.drag 
+local function YPSD_fake_script() -- Frame.drag 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -348,8 +343,8 @@ local function VJOZC_fake_script() -- Frame.drag
 		end
 	end)
 end
-coroutine.wrap(VJOZC_fake_script)()
-local function WEOI_fake_script() -- Frame.LocalScript 
+coroutine.wrap(YPSD_fake_script)()
+local function GBOJFC_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent = game.CoreGui
@@ -393,7 +388,6 @@ local function WEOI_fake_script() -- Frame.LocalScript
 	
 	
 	script.Parent.collectCoins.MouseButton1Click:Connect(function()
-		print("isCollectingCoins: "..(getgenv().iscollectingcoins and "yes" or "no"))
 		getgenv().iscollectingcoins = not getgenv().iscollectingcoins
 		script.Parent.collectCoins.Text = getgenv().iscollectingcoins and "Stop collecting coins" or "Start collecting coins"
 		if not getgenv().iscollectingcoins then return end
@@ -402,29 +396,6 @@ local function WEOI_fake_script() -- Frame.LocalScript
 			local pos
 			
 			while getgenv().iscollectingcoins do
-				--[[pos = getChar().HumanoidRootPart.CFrame
-				setAnchored(true)
-				for _,v in pairs(workspace.coinspawner:GetDescendants()) do
-					if v:IsA("Part") and v.Name == "Handle" then
-						setAnchored(false)
-						getChar().HumanoidRootPart.CFrame = v.CFrame
-						wait(.5)
-						setAnchored(true)
-						wait(1.5)
-					end
-				end
-				setAnchored(false)
-				getChar().HumanoidRootPart.CFrame = pos
-				for __,v1 in pairs(player.Backpack:GetChildren()) do
-					if v1.Name == "PlayCoin" or v1.Name == "Tri-PlayCoin" then
-						getChar().Humanoid:EquipTool(v1)
-						repeat wait() until v1.Parent == getChar()
-						wait(.1)
-						v1:Activate()
-						wait(.1)
-					end
-				end
-				wait(2)]]
 				for i,v in pairs(workspace.coinspawner:GetDescendants()) do
 					if v.Name == "TouchInterest" and v.Parent.Parent:IsA("Tool") then
 						firetouchinterest(getChar().Head, v.Parent, 0)
@@ -528,8 +499,8 @@ local function WEOI_fake_script() -- Frame.LocalScript
 		})
 	end)
 end
-coroutine.wrap(WEOI_fake_script)()
-local function BVTYO_fake_script() -- teleports.drag 
+coroutine.wrap(GBOJFC_fake_script)()
+local function GONLP_fake_script() -- teleports.drag 
 	local script = Instance.new('LocalScript', teleports)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -572,4 +543,4 @@ local function BVTYO_fake_script() -- teleports.drag
 		end
 	end)
 end
-coroutine.wrap(BVTYO_fake_script)()
+coroutine.wrap(GONLP_fake_script)()
