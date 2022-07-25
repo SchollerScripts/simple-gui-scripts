@@ -392,12 +392,10 @@ local function GBOJFC_fake_script() -- Frame.LocalScript
 		script.Parent.collectCoins.Text = getgenv().iscollectingcoins and "Stop collecting coins" or "Start collecting coins"
 		if not getgenv().iscollectingcoins then return end
 		
-		coroutine.wrap(function()
-			local pos
-			
+		coroutine.wrap(function()			
 			while getgenv().iscollectingcoins do
 				for i,v in pairs(workspace.coinspawner:GetDescendants()) do
-					if v.Name == "TouchInterest" and v.Parent.Parent:IsA("Tool") then
+					if v.Name == "TouchInterest" and v.Parent and v.Parent.Parent and v.Parent.Parent:IsA("Tool") then
 						firetouchinterest(getChar().Head, v.Parent, 0)
 						wait()
 						firetouchinterest(getChar().Head, v.Parent, 1)
@@ -421,8 +419,6 @@ local function GBOJFC_fake_script() -- Frame.LocalScript
 				wait(3)
 			end 
 		end)()
-		
-		
 	end)
 	
 	script.Parent.X.MouseButton1Click:Connect(function()
