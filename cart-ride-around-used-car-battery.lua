@@ -397,8 +397,8 @@ local function GBOJFC_fake_script() -- Frame.LocalScript
 				for i,v in pairs(workspace.coinspawner:GetDescendants()) do
 					if v.Name == "TouchInterest" and v.Parent and v.Parent.Parent and v.Parent.Parent:IsA("Tool") then
 						firetouchinterest(getChar().Head, v.Parent, 0)
-						wait()
-						firetouchinterest(getChar().Head, v.Parent, 1)
+						--wait()
+						--firetouchinterest(getChar().Head, v.Parent, 1)
 					end
 					wait()
 				end
@@ -409,7 +409,7 @@ local function GBOJFC_fake_script() -- Frame.LocalScript
 				end
 				wait(.5)
 				for i,v in pairs(player.Backpack:GetChildren()) do
-					if v:IsA("Tool") and string.lower(v.Name):find("coin") then
+					if v.Parent ~= nil and v:IsA("Tool") and string.lower(v.Name):find("coin") then
 						getChar().Humanoid:EquipTool(v)
 						wait(.3)
 						v:Activate()
@@ -443,7 +443,7 @@ local function GBOJFC_fake_script() -- Frame.LocalScript
 		if target ~= nil then
 			getChar().HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame + Vector3.new(0,5,0)
 		else
-			script.Parent.TextBox.Text = "can't find player!!"
+			script.Parent.teleports.TextBox.Text = "can't find player!!"
 		end
 	end)
 	
