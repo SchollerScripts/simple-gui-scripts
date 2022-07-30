@@ -198,7 +198,7 @@ end
 task.spawn(function()
     wait()
     local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
-    local venyx = lib.new("cart ride")
+    local venyx = lib.new("cart ride around used car battery hax")
     local mainPage = venyx:addPage("Main")
 
     local guiSection = mainPage:addSection("UI")
