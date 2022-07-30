@@ -171,13 +171,12 @@ end
 local function god()
     task.spawn(function()
         local s
-        notify("God toggled", "God has been toggled. For some reason looping through everything takes about 30 seconds to complete.", 3)
+        notify("God toggled", "God has been toggled.", 3)
         while getgenv().god do
             for _,v in pairs(workspace:GetChildren()) do
                 if v.Name == "ElectrifiedRail" or v.Name == "garrote wire" or v.Name == "railspawner" or v.Name == "spring gun" or v.Name == "Pendulum" then
                     repeat s = v:FindFirstChild("TouchInterest", true); if s then s:Destroy() end until not v:FindFirstChild("TouchInterest", true)
                 end
-                wait()
             end
             wait(2.5)
         end
