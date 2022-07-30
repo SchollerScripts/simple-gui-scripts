@@ -171,7 +171,7 @@ end
 local function god()
     task.spawn(function()
         local s
-        notify("God toggled", "God has been toggled. For some reason looping through everything requires about 30 seconds to complete.", 3)
+        notify("God toggled", "God has been toggled. For some reason looping through everything takes about 30 seconds to complete.", 3)
         while getgenv().god do
             for _,v in pairs(workspace:GetChildren()) do
                 if v.Name == "ElectrifiedRail" or v.Name == "garrote wire" or v.Name == "railspawner" or v.Name == "spring gun" or v.Name == "Pendulum" then
